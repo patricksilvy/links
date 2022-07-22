@@ -1,33 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Link In Bio</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
     
     <script>
-        window.addEventListener('DOMContentLoaded', () => {
-            VANTA.NET({
-                el: "#vanta",
-                mouseControls: true,
-                touchControls: true,
-                gyroControls: false,
-                minHeight: 200.00,
-                minWidth: 200.00,
-                scale: 1.00,
-                scaleMobile: 1.00,
-                points: 13.00,
-                maxDistance: 24.00
+        if (navigator.userAgentData != undefined && navigator.userAgentData.mobile) {
+            window.addEventListener('DOMContentLoaded', () => {
+                VANTA.NET({
+                    el: "#vanta",
+                    mouseControls: true,
+                    touchControls: true,
+                    gyroControls: false,
+                    minHeight: 200.00,
+                    minWidth: 200.00,
+                    scale: 1.00,
+                    scaleMobile: 2.00,
+                    points: 30.00,
+                    maxDistance: 15.00,
+                    color: 0x000000,
+                    backgroundColor: 0x15151e
+                })
             })
-        })
+        } else  {
+            window.addEventListener('DOMContentLoaded', () => {
+                VANTA.NET({
+                    el: "#vanta",
+                    mouseControls: true,
+                    touchControls: true,
+                    gyroControls: false,
+                    minHeight: 200.00,
+                    minWidth: 200.00,
+                    scale: 1.00,
+                    scaleMobile: 2.00,
+                    points: 20.00,
+                    maxDistance: 23.00,
+                    color: 0x000000,
+                    backgroundColor: 0x15151e
+                })
+            })
+        }
     </script>
     
 </head>
 <body>
     <div id="vanta"></div>
+    
+    <main>
+        <header>
+            <img src="https://avatars.githubusercontent.com/u/91971407?v=4" alt="Patrick Silvy" class="person-img">
+            <h1>@patrick_silvy</h1>
+        </header>
+        <section class="links">
+            <ul>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/69/69524.png" 
+                            alt="Website" width="20px">
+                        Website
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/patrick_silvy/" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" 
+                            alt="Instagram" width="20px">
+                        Instagram
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/patricksilvy/" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733609.png" 
+                            alt="Github" width="20px">
+                        Github
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
 </body>
 </html>
